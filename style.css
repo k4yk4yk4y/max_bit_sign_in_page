@@ -5,14 +5,17 @@
   font-family: 'Poppins', sans-serif;
 }
 
+html, body {
+  height: 100%;
+}
+
 .main-container {
   display: flex;
+  height: 100vh;
 }
 
 .left-bg-with-logo {
   background-color: #090727;
-  width: auto;
-  height: 100vh;
   flex: 3;
   display: flex;
   align-items: center;
@@ -21,8 +24,6 @@
 
 .right-part-with-form {
   background: linear-gradient(90deg, #090727 0%, rgba(0, 0, 0, 0) 150%);
-  width: auto;
-  height: 100vh;
   flex: 5;
   display: flex;
   align-items: center;
@@ -30,29 +31,65 @@
 }
 
 img {
-  mask-image: radial-gradient(circle at center, rgba(0, 0, 0, 1), transparent 90%);
-  -webkit-mask-image: radial-gradient(circle at center, rgba(0, 0, 0, 1), transparent 90%);
+  max-width: 80%;
+  height: auto;
+  ma: radial-gradient(circle at center, sk-imager rgba(0, 0, 0, 1) 50%, transparent 100%);
+  -webkit-mask-image: radial-gradient(circle at center, rgba(0, 0, 0, 1) 10%, transparent 100%);
+  border-radius: 50%;
+  border: 2px solid whitesmoke;
 }
 
 .sign-in-form {
-  background-color: whitesmoke;
-  opacity: 0.9;
-  flex-shrink: 0;
-  width: clamp(30vw, 40vw, 60vw);
-  height: 70%;
+  background-color: rgba(245, 245, 245, 0.95);
+  width: 550px;
+  padding: 40px 30px;
   box-shadow: 0 0 50px rgba(0, 0, 0, 0.5);
-  border-radius: 10%;
+  border-radius: 25px;
   display: flex;
-  align-items: center;
-  justify-content: center;
+  flex-direction: column;
+  gap: 20px;
 }
 
-div h1 {
-  margin: 10px;
+h1 {
   text-align: center;
-  font-size: 30px;
-  align-self: top;
+  font-size: 2.2rem;
   color: #090727;
+  margin-bottom: 10px;
+}
+
+.form-itself {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+  width: 100%;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.form-itself label {
+  font-size: 1.2rem;
+  color: #090727;
+  font-weight: 500;
+}
+
+.form-itself input {
+  width: 100%;
+  height: 45px;
+  border: none;
+  border-bottom: 2px solid #090727;
+  padding: 0 10px;
+  font-size: 1.1rem;
+  background: transparent;
+  transition: border-color 0.3s;
+}
+
+.form-itself input:focus {
+  border-color: #4a40b3;
+  outline: none;
 }
 
 .form-itself button {
@@ -61,44 +98,14 @@ div h1 {
   border: none;
   background-color: #090727;
   color: white;
-  font-size: 20px;
-  border-radius: 10px;
+  font-size: 1.2rem;
+  border-radius: 8px;
   cursor: pointer;
   transition: all 0.3s ease;
-}
-
-.form-itself label {
-  color: #090727;
-  font-size: 20px;
-  font-weight: bold;
-  margin: 10px 0;
-  padding: 5px;
-  transition: all 0.3s ease
-}
-
-.form-itself input {
-  width: 100%;
-  height: 30px;
-  border: none;
-  border-bottom: 2px solid #090727;
-  font-size: 20px;
-  margin: 10px 0;
-  padding: 5px;
-  outline: none;
-  transition: all 0.3s ease;
-  box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+  margin-top: 10px;
 }
 
 .form-itself button:hover {
-  background-color: #090727;
-  color: white;
-  transform: scale(1.1);
-}
-
-input:invalid {
-  border-bottom: 2px solid red;
-  color: red;
-  transition: all 0.3s ease;
-  outline: none;
-  box-shadow: 0 0 10px rgba(255, 0, 0, 0.5);
+  background-color: #1a165f;
+  transform: scale(1.03);
 }
