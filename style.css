@@ -24,6 +24,19 @@ html, body {
   position: relative; /* Для псевдоэлемента */
 }
 
+.app-name {
+  flex: 1, 1, 0;
+  color: white;
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-top: 100px;
+  margin-bottom: 20px;
+  position: absolute;
+  top: 20px;
+  opacity: 0.7;
+  text-shadow: 0 0 25px rgba(255, 255, 255, 0.5)
+}
+
 /* Усиленное размытие логотипа */
 .left-bg-with-logo::before {
   content: "";
